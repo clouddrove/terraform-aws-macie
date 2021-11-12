@@ -1,0 +1,67 @@
+---
+#
+# This is the canonical configuration for the `README.md`
+# Run `make readme` to rebuild the `README.md`
+#
+
+# Name of this project
+name: Terraform AWS Macie
+
+# License of this project
+license: "MIT"
+
+# Canonical GitHub repo
+github_repo: clouddrove/terraform-aws-macie
+
+# Badges to display
+badges:
+  - name: "Terraform"
+    image: "https://img.shields.io/badge/terraform-v0.15-green"
+    url: "https://www.terraform.io"
+  - name: "Licence"
+    image: "https://img.shields.io/badge/License-MIT-blue.svg"
+    url: "LICENSE.md"
+
+#  description of this project
+# yamllint disable rule:line-length
+description: |-
+  Provides a resource to manage an AWS Macie Account.
+
+# extra content
+include:
+  - "terraform.md"
+
+# How to use this project
+# yamllint disable rule:line-length
+usage: |-
+  ### Simple Example
+  Here is an example of how you can use this module in your inventory structure:
+  ```hcl
+  # use this
+      module "macie" {
+      source                  = "clouddrove/macie/aws"
+      version                 = "0.15.0"
+      name                    = "example"
+      environment             = "dev"
+      label_order             = ["name","environment"]
+      account_id              = data.aws_caller_identity.current.account_id
+      bucket_name             = [module.s3.id]
+      members                 = [{
+      account_id              = "450808965822",
+      email                   = "example@mail.com"
+      status                  = "ENABLED"
+      }]
+      custom_data_identifiers = [{
+      name                    = "example"
+      regex                   = "[0-9]{3}-[0-9]{2}-[0-9]{4}"
+      keywords                = ["keyword"]
+      ignore                  = ["ignore"]
+      maximum_match_distance  = 10
+      }]
+      classification_jobs     = [{
+      name                    = "job-1"
+      job_type                = "SCHEDULED"
+      }]
+      }
+    
+  ```
