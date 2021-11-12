@@ -44,6 +44,6 @@ module "macie" {
     name     = "job-1"
     job_type = "SCHEDULED"
   }]
-    weekly_schedule = "MONDAY"
- }
+  weekly_schedule = "MONDAY"
+}
 

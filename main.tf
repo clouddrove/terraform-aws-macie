@@ -10,7 +10,7 @@ module "labels" {
   label_order = var.label_order
 }
 
-data "aws_caller_identity" "current" {} 
+data "aws_caller_identity" "current" {}
 
 locals {
   enabled                 = var.enabled
@@ -98,8 +98,8 @@ resource "aws_macie2_classification_job" "default" {
     }
   }
   schedule_frequency {
-    daily_schedule = var.daily_schedule
-    weekly_schedule = var.weekly_schedule
+    daily_schedule   = var.daily_schedule
+    weekly_schedule  = var.weekly_schedule
     monthly_schedule = var.monthly_schedule
   }
 
