@@ -131,19 +131,19 @@ variable "bucket_name" {
 }
 
 variable "daily_schedule" {
-type = string
-default = null
-description = "Specifies a daily recurrence pattern for running the job."
+  type        = string
+  default     = null
+  description = "Specifies a daily recurrence pattern for running the job."
 }
 
 variable "weekly_schedule" {
-type = string
-default = null
-description = "Specifies a weekly recurrence pattern for running the job."
+  type        = string
+  default     = null
+  description = "Specifies a weekly recurrence pattern for running the job."
 }
 
 variable "monthly_schedule" {
-type = string
-default = null
-description = "Specifies a monthly recurrence pattern for running the job."
+  type        = string
+  default     = null
+  description = "Specifies a monthly recurrence pattern for running the job."
 }
