@@ -7,7 +7,7 @@ data "aws_caller_identity" "current" {}
 module "s3" {
 
   source  = "clouddrove/s3/aws"
-  version = "0.15.0"
+  version = "0.15.1"
 
   environment = "test"
   label_order = ["name", "environment"]
