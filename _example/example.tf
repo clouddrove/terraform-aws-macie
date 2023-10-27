@@ -7,7 +7,7 @@ data "aws_caller_identity" "current" {}
 module "s3" {
 
   source  = "clouddrove/s3/aws"
-  version = "1.3.0"
+  version = "2.0.0"
 
   environment = "test"
   label_order = ["name", "environment"]
@@ -27,7 +27,6 @@ module "macie" {
 
   account_id  = data.aws_caller_identity.current.account_id
   bucket_name = [module.s3.id]
-  #admin_account_ids = ["232322372372"]  Provide admin account id in Origanisation. 
   members = [{
     account_id = "450808965822",
     email      = "hello@clouddrove.com"
