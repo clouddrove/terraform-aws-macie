@@ -1,9 +1,10 @@
 provider "aws" {
-  region = "us-east-1"
+  region = local.region
 }
 locals {
   name        = "example"
   environment = "dev"
+  region = "us-east-1"
 }
 data "aws_caller_identity" "current" {}
 
