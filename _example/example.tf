@@ -1,7 +1,10 @@
 provider "aws" {
   region = "us-east-1"
 }
-
+locals {
+  name        = "example"
+  environment = "dev"
+}
 data "aws_caller_identity" "current" {}
 
 module "s3" {
@@ -9,10 +12,8 @@ module "s3" {
   source  = "clouddrove/s3/aws"
   version = "2.0.0"
 
-  environment = "test"
-  label_order = ["name", "environment"]
-
-  name       = "logs-macie"
+  name        = "${local.name}-logs-macie"
+  environment = local.environment
   versioning = true
   acl        = "private"
 }
@@ -21,10 +22,8 @@ module "s3" {
 module "macie" {
   source = "../"
 
-  name        = "example"
-  environment = "dev"
-  label_order = ["name", "environment"]
-
+  name        = local.name
+  environment = local.environment
   account_id  = data.aws_caller_identity.current.account_id
   bucket_name = [module.s3.id]
   members = [{
