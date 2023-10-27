@@ -4,7 +4,7 @@ provider "aws" {
 locals {
   name        = "example"
   environment = "dev"
-  region = "us-east-1"
+  region      = "us-east-1"
 }
 data "aws_caller_identity" "current" {}
 
@@ -15,10 +15,9 @@ module "s3" {
 
   name        = "${local.name}-logs-macie"
   environment = local.environment
-  versioning = true
-  acl        = "private"
+  versioning  = true
+  acl         = "private"
 }
-
 
 module "macie" {
   source = "../"
