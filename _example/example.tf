@@ -1,33 +1,31 @@
 provider "aws" {
-  region = "us-east-1"
+  region = local.region
 }
-
+locals {
+  name        = "example"
+  environment = "dev"
+  region      = "us-east-1"
+}
 data "aws_caller_identity" "current" {}
 
 module "s3" {
 
   source  = "clouddrove/s3/aws"
-  version = "1.3.0"
+  version = "2.0.0"
 
-  environment = "test"
-  label_order = ["name", "environment"]
-
-  name       = "logs-macie"
-  versioning = true
-  acl        = "private"
+  name        = "${local.name}-logs-macie"
+  environment = local.environment
+  versioning  = true
+  acl         = "private"
 }
-
 
 module "macie" {
   source = "../"
 
-  name        = "example"
-  environment = "dev"
-  label_order = ["name", "environment"]
-
+  name        = local.name
+  environment = local.environment
   account_id  = data.aws_caller_identity.current.account_id
   bucket_name = [module.s3.id]
-  #admin_account_ids = ["232322372372"]  Provide admin account id in Origanisation. 
   members = [{
     account_id = "450808965822",
     email      = "hello@clouddrove.com"
