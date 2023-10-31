@@ -24,7 +24,6 @@
   <img src="https://github.com/clouddrove/terraform-aws-macie/actions/workflows/terraform.yml/badge.svg" alt="static-checks">
 </a>
 
-
 </p>
 <p align="center">
 
