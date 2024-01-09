@@ -15,18 +15,15 @@ github_repo: clouddrove/terraform-aws-macie
 
 # Badges to display
 badges:
-  - name: "Terraform"
-    image: "https://img.shields.io/badge/Terraform-v1.1.7-green"
-    url: "https://www.terraform.io"
-  - name: "Licence"
-    image: "https://img.shields.io/badge/License-APACHE-blue.svg"
-    url: "LICENSE.md"
+  - name: "Latest Release"
+    image: "https://img.shields.io/github/release/clouddrove/terraform-aws-macie.svg"
+    url: "https://github.com/clouddrove/terraform-aws-macie/releases/latest"
   - name: "tfsec"
     image: "https://github.com/clouddrove/terraform-aws-macie/actions/workflows/tfsec.yml/badge.svg"
     url: "https://github.com/clouddrove/terraform-aws-macie/actions/workflows/tfsec.yml"
-  - name: "static-checks"
-    image: "https://github.com/clouddrove/terraform-aws-macie/actions/workflows/terraform.yml/badge.svg"
-    url: "https://github.com/clouddrove/terraform-aws-macie/actions/workflows/terraform.yml"
+  - name: "Licence"
+    image: "https://img.shields.io/badge/License-APACHE-blue.svg"
+    url: "LICENSE.md"
 
 #  description of this project
 # yamllint disable rule:line-length
@@ -46,7 +43,7 @@ usage: |-
   # use this
       module "macie" {
       source                  = "clouddrove/macie/aws"
-      version                 = "1.0.1"
+      version                 = "1.3.0"
       name                    = "example"
       environment             = "dev"
       label_order             = ["name","environment"]
