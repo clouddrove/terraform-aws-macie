@@ -44,4 +44,3 @@ module "macie" {
   }]
   weekly_schedule = "MONDAY"
 }
-
