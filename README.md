@@ -64,7 +64,7 @@ This table contains both Prerequisites and Providers:
 
 
 
-<!-- 
+<!--
 
 
 
@@ -80,7 +80,7 @@ This table contains both Prerequisites and Providers:
 
 
 
-## Feedback 
+## Feedback
 Spot a bug or have thoughts to share with us? Let's squash it together! Log it in our [issue tracker](https://github.com/clouddrove/terraform-aws-macie/issues), feel free to drop us an email at [hello@clouddrove.com](mailto:hello@clouddrove.com).
 
 Show some love with a ★ on [our GitHub](https://github.com/clouddrove/terraform-aws-macie)!  if our work has brightened your day! – your feedback fuels our journey!
@@ -107,7 +107,7 @@ Join our tech elites [Join Now][slack] 🚀
  Click [here][blog] :books: :star2:
 
 ## Tap into our capabilities
-We provide a platform for organizations to engage with experienced top-tier DevOps & Cloud services. Tap into our pool of certified engineers and architects to elevate your DevOps and Cloud Solutions. 
+We provide a platform for organizations to engage with experienced top-tier DevOps & Cloud services. Tap into our pool of certified engineers and architects to elevate your DevOps and Cloud Solutions.
 
 At [CloudDrove][website], has extensive experience in designing, building & migrating environments, securing, consulting, monitoring, optimizing, automating, and maintaining complex and large modern systems. With remarkable client footprints in American & European corridors, our certified architects & engineers are ready to serve you as per your requirements & schedule. Write to us at [business@clouddrove.com](mailto:business@clouddrove.com).
 

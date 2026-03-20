@@ -81,7 +81,7 @@ variable "custom_data_identifiers" {
     maximum_match_distance:
     name:
     description:
-    tags: 
+    tags:
   DOC
   default     = []
 }
@@ -91,7 +91,7 @@ variable "classification_jobs" {
   description = <<-DOC
     A list of maps of classification jobs.
       name:
-      description : 
+      description :
       initial_run:
       job_type :
       Possible values:

@@ -27,4 +27,3 @@
 | Name | Description |
 |------|-------------|
 | account\_id | The ID of the Macie account. |
-
