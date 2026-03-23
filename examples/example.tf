@@ -11,7 +11,7 @@ data "aws_caller_identity" "current" {}
 module "s3" {
 
   source  = "clouddrove/s3/aws"
-  version = "2.0.0"
+  version = "2.0.1"
 
   name        = "${local.name}-logs-macie"
   environment = local.environment
