@@ -7,7 +7,7 @@
 | admin\_account\_ids | The list of AWS account IDs for the account to designate as the delegated Amazon Macie administrator accounts for the organization. | `list(string)` | `[]` | no |
 | attributes | Additional attributes (e.g. `1`). | `list(any)` | `[]` | no |
 | bucket\_name | The name of an AWS Partition S3 Bucket or the Amazon Resource Name (ARN) of S3 on Outposts Bucket that you want to associate this access point with. | `list(any)` | `[]` | no |
-| classification\_jobs | A list of maps of classification jobs.<br>  name:<br>  description : <br>  initial\_run:<br>  job\_type :<br>  Possible values:<br>  job\_status:<br>  sampling\_percentage : | `list(any)` | `[]` | no |
+| classification\_jobs | A list of maps of classification jobs.<br>  name:<br>  description :<br>  initial\_run:<br>  job\_type :<br>  Possible values:<br>  job\_status:<br>  sampling\_percentage : | `list(any)` | `[]` | no |
 | custom\_data\_identifiers | A list of maps of custom data identifiers.<br>regex:<br>keywords:<br>ignore\_words:<br>maximum\_match\_distance:<br>name:<br>description:<br>tags: | `list(any)` | `[]` | no |
 | daily\_schedule | Specifies a daily recurrence pattern for running the job. | `string` | `null` | no |
 | delimiter | Delimiter to be used between `organization`, `environment`, `name` and `attributes`. | `string` | `"-"` | no |
@@ -27,3 +27,4 @@
 | Name | Description |
 |------|-------------|
 | account\_id | The ID of the Macie account. |
+
